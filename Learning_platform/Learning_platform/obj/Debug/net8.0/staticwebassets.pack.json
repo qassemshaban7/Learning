@@ -1,23 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\80e73b0a-2b78-49ec-9dc3-028707356400_5421.jpg",
+      "Id": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\5619f038-6c89-44f9-aaca-17389b04b45d_7b460056d29bc94a.jpg",
+      "PackagePath": "staticwebassets\\Images\\5619f038-6c89-44f9-aaca-17389b04b45d_7b460056d29bc94a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\80e73b0a-2b78-49ec-9dc3-028707356400_5421.jpg",
       "PackagePath": "staticwebassets\\Images\\80e73b0a-2b78-49ec-9dc3-028707356400_5421.jpg"
     },
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\cf0b4e12-e62d-4d2e-b3ad-bc8daa94f0f3_dancing-spider-canny.png",
+      "Id": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\cf0b4e12-e62d-4d2e-b3ad-bc8daa94f0f3_dancing-spider-canny.png",
       "PackagePath": "staticwebassets\\Images\\cf0b4e12-e62d-4d2e-b3ad-bc8daa94f0f3_dancing-spider-canny.png"
     },
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\91f44f99-e4ed-4f8c-bc16-e19c11f245fe_الجوكر.jpg",
+      "Id": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\91f44f99-e4ed-4f8c-bc16-e19c11f245fe_الجوكر.jpg",
       "PackagePath": "staticwebassets\\certificates\\91f44f99-e4ed-4f8c-bc16-e19c11f245fe_الجوكر.jpg"
     },
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\9c3e3474-8c7b-440f-b0b4-ce36d2ff02e0_5421.jpg",
+      "Id": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\9c3e3474-8c7b-440f-b0b4-ce36d2ff02e0_5421.jpg",
       "PackagePath": "staticwebassets\\instructorImage\\9c3e3474-8c7b-440f-b0b4-ce36d2ff02e0_5421.jpg"
     },
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\videos\\4ee811b1-5ec2-49ce-872e-3ed7da37504c_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
+      "Id": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\videos\\4ee811b1-5ec2-49ce-872e-3ed7da37504c_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
       "PackagePath": "staticwebassets\\videos\\4ee811b1-5ec2-49ce-872e-3ed7da37504c_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4"
     },
     {

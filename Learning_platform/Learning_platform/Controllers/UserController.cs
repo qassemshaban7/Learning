@@ -191,5 +191,15 @@ namespace Learning_platform.Controllers
             await usermanager.UpdateAsync(user);
             return Ok();
         }
+        [HttpPost("check_code")]
+        public async Task<IActionResult> CheckCode(CheckCodeDto model)  
+        {
+            if (!ModelState.IsValid) return BadRequest();
+            var user = await usermanager.FindByEmailAsync(model.Email);
+            if (user is null || user.ResetExpires is null
+               || user.ResetExpires < DateTime.Now || user.PasswordResetPin != model.pin)
+                return BadRequest(new {message =  "Invalid Token!"});
+            return Ok(new { message = "Valid Token." });
+        }
     }
 }

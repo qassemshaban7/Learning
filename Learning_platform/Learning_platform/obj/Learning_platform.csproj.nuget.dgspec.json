@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj": {}
+    "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj": {
+    "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj",
+        "projectUniqueName": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj",
         "projectName": "Learning_platform",
-        "projectPath": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj",
-        "packagesPath": "C:\\Users\\KING\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\obj\\",
+        "projectPath": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\Learning_platform.csproj",
+        "packagesPath": "C:\\Users\\HitmanX\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KING\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HitmanX\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
