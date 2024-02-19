@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAktn//4ZcwUO7xqLJroWqzQAAAAACAAAAAAAQZgAAAAEAACAAAAD+VRa3/+akgHZDGWxtAF0OVkMFVv3FAUe489ngRDWKUgAAAAAOgAAAAAIAACAAAAB+7P8nndpEZlxU/r4wDxS2wxB+dM/uOLdahd7u/LBHGCAAAABfIAf0TK90X8CeNrOv1YtVri+iJ3mEEzUBih0W+bxhGkAAAADjzhsZ4rnd7C8L9HiM+wmYVb4Z2z/njE19z+qjvlcvOvaRUiMQZHz7I71Qi+US0gdjNfdpmnHcbWbIGh1DokSW</EncryptedPassword>
+    <_PublishTargetUrl>ftp://eLearningPlatform.somee.com/www.eLearningPlatform.somee.com</_PublishTargetUrl>
+    <History>True|2024-02-08T19:20:00.4159024Z;False|2024-02-08T13:41:33.9939687+02:00;False|2024-02-08T13:09:43.1434562+02:00;False|2024-02-06T23:41:23.6764197+02:00;False|2024-02-06T21:24:07.8919100+02:00;False|2024-02-06T20:31:15.0869296+02:00;False|2024-02-06T19:17:22.4586974+02:00;False|2024-02-06T18:48:28.6364221+02:00;False|2024-02-06T18:32:27.2369106+02:00;False|2024-02-06T18:30:59.5913498+02:00;False|2024-02-06T18:27:16.1866717+02:00;True|2024-02-05T19:54:28.9703013+02:00;False|2024-02-05T19:19:11.6753638+02:00;False|2024-02-05T19:07:54.9426338+02:00;False|2024-02-05T17:34:22.2590389+02:00;False|2024-02-05T17:12:51.2944559+02:00;False|2024-02-05T17:12:41.9487163+02:00;False|2024-02-05T17:10:13.4642427+02:00;True|2024-02-02T19:29:53.5841398+02:00;False|2024-02-02T19:18:55.9186898+02:00;True|2024-01-31T22:03:14.4968869+02:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>01/31/2024 23:25:37</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>02/08/2024 20:07:11</publishTime>
+    </File>
+    <File Include="Azure.Core.dll">
+      <publishTime>06/30/2022 21:28:36</publishTime>
+    </File>
+    <File Include="Azure.Identity.dll">
+      <publishTime>09/19/2022 22:31:34</publishTime>
+    </File>
+    <File Include="BouncyCastle.Cryptography.dll">
+      <publishTime>04/21/2023 14:06:40</publishTime>
+    </File>
+    <File Include="Learning_platform.deps.json">
+      <publishTime>02/08/2024 21:10:31</publishTime>
+    </File>
+    <File Include="Learning_platform.dll">
+      <publishTime>02/08/2024 21:10:19</publishTime>
+    </File>
+    <File Include="Learning_platform.exe">
+      <publishTime>02/08/2024 21:10:20</publishTime>
+    </File>
+    <File Include="Learning_platform.pdb">
+      <publishTime>02/08/2024 21:10:19</publishTime>
+    </File>
+    <File Include="Learning_platform.runtimeconfig.json">
+      <publishTime>02/06/2024 21:41:54</publishTime>
+    </File>
+    <File Include="MailKit.dll">
+      <publishTime>11/11/2023 21:25:24</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.JwtBearer.dll">
+      <publishTime>11/30/2023 21:08:04</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Cryptography.Internal.dll">
+      <publishTime>11/30/2023 21:05:14</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Cryptography.KeyDerivation.dll">
+      <publishTime>11/30/2023 21:05:50</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll">
+      <publishTime>11/30/2023 21:05:54</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>10/23/2021 01:47:36</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>03/28/2023 07:28:24</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>11/30/2023 15:13:40</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>11/30/2023 15:14:16</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>11/30/2023 15:14:34</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>11/30/2023 15:15:14</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Identity.Core.dll">
+      <publishTime>11/30/2023 21:05:52</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Identity.Stores.dll">
+      <publishTime>11/30/2023 21:05:52</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>11/30/2023 10:25:18</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>10/03/2022 19:40:38</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
+      <publishTime>11/20/2021 00:02:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Abstractions.dll">
+      <publishTime>11/21/2023 03:54:14</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>11/21/2023 03:11:54</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>11/21/2023 03:14:30</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>11/21/2023 03:17:02</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>11/21/2023 03:30:36</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>11/21/2023 03:23:16</publishTime>
+    </File>
+    <File Include="Microsoft.OpenApi.dll">
+      <publishTime>08/29/2020 22:14:12</publishTime>
+    </File>
+    <File Include="Microsoft.SqlServer.Server.dll">
+      <publishTime>01/27/2022 19:19:08</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/23/2021 01:40:24</publishTime>
+    </File>
+    <File Include="MimeKit.dll">
+      <publishTime>11/11/2023 21:07:00</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/28/2023 07:28:24</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/net6.0/System.Drawing.Common.dll">
+      <publishTime>10/23/2021 01:51:42</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>01/13/2023 00:19:36</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>01/13/2023 00:19:36</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>01/13/2023 00:19:36</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>01/13/2023 00:19:36</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/28/2023 07:27:58</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/23/2021 01:40:18</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Drawing.Common.dll">
+      <publishTime>10/23/2021 01:48:10</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Runtime.Caching.dll">
+      <publishTime>10/23/2021 01:52:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/23/2021 01:51:04</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Windows.Extensions.dll">
+      <publishTime>10/23/2021 01:49:58</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.Swagger.dll">
+      <publishTime>07/19/2022 17:21:22</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerGen.dll">
+      <publishTime>07/19/2022 17:21:38</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
+      <publishTime>07/19/2022 17:21:48</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>08/19/2022 21:58:02</publishTime>
+    </File>
+    <File Include="System.Drawing.Common.dll">
+      <publishTime>10/23/2021 01:49:12</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>11/21/2023 03:10:00</publishTime>
+    </File>
+    <File Include="System.Memory.Data.dll">
+      <publishTime>04/08/2021 18:45:54</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>10/23/2021 01:52:02</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/23/2021 01:51:04</publishTime>
+    </File>
+    <File Include="System.Security.Permissions.dll">
+      <publishTime>10/23/2021 01:49:50</publishTime>
+    </File>
+    <File Include="System.Windows.Extensions.dll">
+      <publishTime>10/23/2021 01:49:44</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>02/08/2024 21:10:32</publishTime>
+    </File>
+    <File Include="wwwroot/certificates/00865ef4-149f-47f3-9846-772566950ccc_الجوكر.jpg">
+      <publishTime>01/31/2024 23:59:23</publishTime>
+    </File>
+    <File Include="wwwroot/certificates/91f44f99-e4ed-4f8c-bc16-e19c11f245fe_الجوكر.jpg">
+      <publishTime>02/08/2024 19:19:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/0dec9a7c-a80e-4dc2-af3c-c5acb010ebe3_Screenshot 2023-11-29 095836.png">
+      <publishTime>01/31/2024 18:46:28</publishTime>
+    </File>
+    <File Include="wwwroot/Images/0e15cb6c-5ddb-4b05-bb43-880e4f4fcaf7_الجوكر.jpg">
+      <publishTime>01/31/2024 18:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/694a89cc-c137-4774-93a1-c7917d50d4d6_Screenshot 2023-11-29 095836.png">
+      <publishTime>01/31/2024 18:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/6dc86b5f-115a-4285-a7c2-07646bdb2820_Screenshot 2023-11-29 093420.png">
+      <publishTime>01/31/2024 20:40:39</publishTime>
+    </File>
+    <File Include="wwwroot/Images/70c101af-0f77-4939-9451-9d5e7c7a1e91_الجوكر.jpg">
+      <publishTime>01/31/2024 18:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/a2a60629-94e1-495e-8ef3-b8a4463590fb_Screenshot 2023-11-29 095836.png">
+      <publishTime>01/31/2024 18:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/cf0b4e12-e62d-4d2e-b3ad-bc8daa94f0f3_dancing-spider-canny.png">
+      <publishTime>02/06/2024 16:26:43</publishTime>
+    </File>
+    <File Include="wwwroot/Images/cf49ae2f-968b-43c6-bbc6-c63cffb2f219_الجوكر.jpg">
+      <publishTime>01/31/2024 18:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/dfe912f8-668f-493a-97e0-d57ad95e420c_Screenshot 2023-11-29 093420.png">
+      <publishTime>01/31/2024 18:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/e2935205-2d23-4460-b21f-1e356d1946c5_Screenshot 2023-11-29 093420.png">
+      <publishTime>01/31/2024 20:41:01</publishTime>
+    </File>
+    <File Include="wwwroot/Images/e6195399-1f7c-4c02-ad5b-e871d52f0179_الجوكر.jpg">
+      <publishTime>01/31/2024 18:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/f387456a-fa94-449f-9fab-f9d61d09eadb_Screenshot 2023-11-29 093420.png">
+      <publishTime>01/31/2024 23:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/instructorImage/4bcfe888-c386-411e-b3db-b1a462d70d8c_الجوكر.jpg">
+      <publishTime>02/01/2024 16:48:21</publishTime>
+    </File>
+    <File Include="wwwroot/instructorImage/9c3e3474-8c7b-440f-b0b4-ce36d2ff02e0_5421.jpg">
+      <publishTime>02/08/2024 19:17:48</publishTime>
+    </File>
+    <File Include="wwwroot/videos/1017deef-0888-435f-9dd7-5aaa4e015bfa_[Arabic] Learn Git _ GitHub _20 - The End And Advices%28720P_HD%29.mp4">
+      <publishTime>01/31/2024 23:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/videos/4ee811b1-5ec2-49ce-872e-3ed7da37504c_[Arabic] Learn Git _ GitHub _20 - The End And Advices%28720P_HD%29.mp4">
+      <publishTime>02/08/2024 19:19:38</publishTime>
+    </File>
+    <File Include="wwwroot/videos/a143cfdd-5e89-4dd2-b95d-05e84f3b4bf0_[Arabic] Learn Git _ GitHub _01 - Whats Git _ GitHub _ Why U Should Learn Part 1%28720P_HD%29.mp4">
+      <publishTime>02/01/2024 11:54:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
