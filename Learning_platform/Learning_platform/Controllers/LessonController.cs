@@ -30,14 +30,13 @@ namespace Learning_platform.Controllers
                 return NotFound("Lesson not found.");
             }
 
-            string videoUrl = GetVideoUrl(lesson.Video);
-
             return Ok(new
             {
                 LessonName = lesson.Name,
-                VideoUrl = videoUrl
+                VideoUrl = $"videos/{lesson.Video}",
             });
         }
+
 
         [HttpGet("GetVideosForCourse/{courseId}")]
         public IActionResult GetVideosForCourse(int courseId)
@@ -51,30 +50,16 @@ namespace Learning_platform.Controllers
 
             var videos = course.Lessons.Select(lesson =>
             {
-                string videoUrl = GetVideoUrl(lesson.Video);
+                //string videoUrl = GetVideoUrl(lesson.Video);
                 return new
                 {
+                    LessonId = lesson.Id,
                     LessonName = lesson.Name,
-                    VideoUrl = videoUrl
+                    VideoUrl = $"videos/{lesson.Video}",
                 };
             }).ToList();
 
             return Ok(videos);
-        }
-
-        [NonAction]
-        private string GetVideoUrl(string videoFileName)
-        {
-            //string baseUrl = "https://localhost:5001/";
-            string videoPath = GetVideoFilePath(videoFileName);
-            //return System.IO.File.Exists(videoPath) ? + "videos/" + videoFileName : null;
-            return System.IO.File.Exists(videoPath) ? "videos/" + videoFileName : null;
-        }
-
-        [NonAction]
-        private string GetVideoFilePath(string videoFileName)
-        {
-            return Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "videos", videoFileName);
         }
 
         [Authorize(Roles = "Admin")]
@@ -92,10 +77,12 @@ namespace Learning_platform.Controllers
             {
                 return BadRequest($"Course with id '{lessonDTO.CourseId}' not found.");
             }
+
             if (lessonDTO.VideoFile != null)
             {
-                string[] allowedExtensions = { ".mp4", ".avi", ".mkv" }; 
-                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "videos");
+                string[] allowedExtensions = { ".mp4", ".avi", ".mkv" };
+                string uploadsFolder = "videos";
+
                 if (!allowedExtensions.Contains(Path.GetExtension(lessonDTO.VideoFile.FileName).ToLower()))
                 {
                     return BadRequest("Only .mp4, .avi, and .mkv videos are allowed!");
@@ -118,6 +105,7 @@ namespace Learning_platform.Controllers
             }
             return BadRequest();
         }
+
         [Authorize(Roles = "Admin")]
         [HttpPut("updatelesson/{id}")]
         public async Task<IActionResult> UpdateLesson(int id, [FromForm] LessonDTO lessonDTO)
@@ -132,7 +120,7 @@ namespace Learning_platform.Controllers
             if (lessonDTO.VideoFile != null)
             {
                 string[] allowedExtensions = { ".mp4", ".avi", ".mkv" };
-                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "videos");
+                string uploadsFolder = "videos";
 
                 if (!allowedExtensions.Contains(Path.GetExtension(lessonDTO.VideoFile.FileName).ToLower()))
                 {
@@ -150,6 +138,7 @@ namespace Learning_platform.Controllers
 
             return Ok("Lesson updated successfully.");
         }
+
         [Authorize(Roles = "Admin")]
         [HttpDelete("deletelesson/{id}")]
         public async Task<IActionResult> DeleteLesson(int id)
@@ -159,6 +148,13 @@ namespace Learning_platform.Controllers
             if (lessonToDelete == null)
             {
                 return NotFound($"Lesson with id '{id}' not found.");
+            }
+
+            var videoPath = Path.Combine("wwwroot", "videos", lessonToDelete.Video);
+
+            if (System.IO.File.Exists(videoPath))
+            {
+                System.IO.File.Delete(videoPath);
             }
 
             _context.Lessons.Remove(lessonToDelete);
@@ -171,8 +167,9 @@ namespace Learning_platform.Controllers
         {
             if (file == null || file.Length == 0)
             {
-                return null; 
+                return null;
             }
+
             string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", folder);
 
             var uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
@@ -182,8 +179,7 @@ namespace Learning_platform.Controllers
             {
                 await file.CopyToAsync(fileStream);
             }
-
-            return Path.Combine(folder, uniqueFileName);
+            return uniqueFileName;
         }
     }
 }

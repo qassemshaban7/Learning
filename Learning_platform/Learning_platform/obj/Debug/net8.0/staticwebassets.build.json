@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "InvdgpsxpZnEjyswm4n61WQNkZXoOZm/2rVFBmK3/Q8=",
+  "Hash": "Zq3R6uyqzs4Fu8KpC+25rh2pEkIalQnDhKzRRYyRXb4=",
   "Source": "Learning_platform",
   "BasePath": "_content/Learning_platform",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "Learning_platform\\wwwroot",
       "Source": "Learning_platform",
-      "ContentRoot": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\91f44f99-e4ed-4f8c-bc16-e19c11f245fe_الجوكر.jpg",
+      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg",
       "SourceId": "Learning_platform",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
-      "RelativePath": "certificates/91f44f99-e4ed-4f8c-bc16-e19c11f245fe_الجوكر.jpg",
+      "RelativePath": "certificates/8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\certificates\\91f44f99-e4ed-4f8c-bc16-e19c11f245fe_الجوكر.jpg"
+      "OriginalItemSpec": "wwwroot\\certificates\\8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg"
     },
     {
-      "Identity": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\5619f038-6c89-44f9-aaca-17389b04b45d_7b460056d29bc94a.jpg",
+      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\adminphoto.jpg",
       "SourceId": "Learning_platform",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
-      "RelativePath": "Images/5619f038-6c89-44f9-aaca-17389b04b45d_7b460056d29bc94a.jpg",
+      "RelativePath": "Images/adminphoto.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\5619f038-6c89-44f9-aaca-17389b04b45d_7b460056d29bc94a.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\adminphoto.jpg"
     },
     {
-      "Identity": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\80e73b0a-2b78-49ec-9dc3-028707356400_5421.jpg",
+      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg",
       "SourceId": "Learning_platform",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
-      "RelativePath": "Images/80e73b0a-2b78-49ec-9dc3-028707356400_5421.jpg",
+      "RelativePath": "instructorImage/38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,15 +71,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\80e73b0a-2b78-49ec-9dc3-028707356400_5421.jpg"
+      "OriginalItemSpec": "wwwroot\\instructorImage\\38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg"
     },
     {
-      "Identity": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\cf0b4e12-e62d-4d2e-b3ad-bc8daa94f0f3_dancing-spider-canny.png",
+      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\videos\\6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
       "SourceId": "Learning_platform",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
-      "RelativePath": "Images/cf0b4e12-e62d-4d2e-b3ad-bc8daa94f0f3_dancing-spider-canny.png",
+      "RelativePath": "videos/6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,45 +90,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\cf0b4e12-e62d-4d2e-b3ad-bc8daa94f0f3_dancing-spider-canny.png"
-    },
-    {
-      "Identity": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\9c3e3474-8c7b-440f-b0b4-ce36d2ff02e0_5421.jpg",
-      "SourceId": "Learning_platform",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
-      "BasePath": "_content/Learning_platform",
-      "RelativePath": "instructorImage/9c3e3474-8c7b-440f-b0b4-ce36d2ff02e0_5421.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\instructorImage\\9c3e3474-8c7b-440f-b0b4-ce36d2ff02e0_5421.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\videos\\4ee811b1-5ec2-49ce-872e-3ed7da37504c_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
-      "SourceId": "Learning_platform",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HitmanX\\Source\\Repos\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
-      "BasePath": "_content/Learning_platform",
-      "RelativePath": "videos/4ee811b1-5ec2-49ce-872e-3ed7da37504c_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\videos\\4ee811b1-5ec2-49ce-872e-3ed7da37504c_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4"
+      "OriginalItemSpec": "wwwroot\\videos\\6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4"
     }
   ]
 }

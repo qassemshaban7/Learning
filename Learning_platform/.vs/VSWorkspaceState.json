@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Learning_platform",
+    "\\Learning_platform\\Controllers",
+    "\\Learning_platform\\DTO",
     "\\Learning_platform\\Migrations",
-    "\\Learning_platform\\Models"
+    "\\Learning_platform\\Models",
+    "\\Learning_platform\\wwwroot",
+    "\\Learning_platform\\wwwroot\\Images"
   ],
-  "SelectedNode": "\\Learning_platform\\Migrations\\20240208201733_init.cs",
+  "SelectedNode": "\\Learning_platform\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

@@ -440,3 +440,4 @@ C:\Users\KING\Downloads\Learning_platform\Learning_platform\obj\Debug\net8.0\ref
 C:\Users\KING\Downloads\Learning_platform\Learning_platform\obj\Debug\net8.0\Learning_platform.pdb
 C:\Users\KING\Downloads\Learning_platform\Learning_platform\obj\Debug\net8.0\Learning_platform.genruntimeconfig.cache
 C:\Users\KING\Downloads\Learning_platform\Learning_platform\obj\Debug\net8.0\ref\Learning_platform.dll
+C:\Users\KING\My-GitHub\Learning\Learning_platform\Learning_platform\obj\Debug\net8.0\Learning_platform.sourcelink.json

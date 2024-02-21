@@ -16,8 +16,36 @@ namespace Learning_platform.Controllers
         {
             _context = context;
         }
-        [HttpGet("{instructorId}/image")]
-        public IActionResult GetInstructorImage(int instructorId)
+
+        [HttpGet("instructors")]
+        public IActionResult GetAllInstructorsDetails()
+        {
+            var instructors = _context.Instructors.ToList();
+
+            if (instructors == null || !instructors.Any())
+            {
+                return NotFound("No instructors found.");
+            }
+
+            var instructorDetails = instructors.Select(instructor =>
+            {
+                var imagePath = Path.Combine( "instructorImage", instructor.Image);
+                    return new
+                    {
+                        Id = instructor.Id,
+                        Name = instructor.Name,
+                        ImageUrl = $"{imagePath}",
+                        Description = instructor.Description,
+                        Courses = instructor.Courses
+                    };
+            }).ToList();
+
+            return Ok(instructorDetails);
+        }
+
+
+        [HttpGet("{instructorId}/instructor")]
+        public IActionResult GetInstructorDetails(int instructorId)
         {
             var instructor = _context.Instructors.Find(instructorId);
 
@@ -25,14 +53,16 @@ namespace Learning_platform.Controllers
             {
                 return NotFound("Instructor not found.");
             }
-            var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", instructor.Image);
 
-            if (!System.IO.File.Exists(imagePath))
+            var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "instructorImage", instructor.Image);
+
+            var imageDetails = new
             {
-                return NotFound("Image not found.");
-            }
-            var imageBytes = System.IO.File.ReadAllBytes(imagePath);
-            return File(imageBytes, "image/jpeg");
+                Url = $"{instructor.Image}",
+                Name = instructor.Name,
+            };
+
+            return Ok(imageDetails);
         }
 
         [Authorize(Roles = "Admin")]

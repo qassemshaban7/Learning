@@ -46,11 +46,13 @@ namespace Learning_platform.Controllers
         public IActionResult GetCourses()
         {
             var courses = _context.Courses.ToList();
-            var courseDTOs = courses.Select(c => new AddCourseDTO
+            var courseDTOs = courses.Select(c => new getcoursedto
             {
+                Id = c.Id,
                 Name = c.Name, 
                 Description = c.Description, 
                 Price = c.Price,
+                ImageOfCertificate = c.ImageOfCertificate,
             }).ToList();
             return Ok(courseDTOs);
         }
@@ -64,7 +66,14 @@ namespace Learning_platform.Controllers
                 return NotFound();
             }
 
-            var courseDTO = new AddCourseDTO { Name = course.Name, Description = course.Description , Price = course.Price, };
+            var courseDTO = new getcoursedto
+            {
+                Id = course.Id,
+                Name = course.Name,
+                Description = course.Description ,
+                Price = course.Price,
+                ImageOfCertificate = course.ImageOfCertificate,
+            };
             return Ok(courseDTO);
         }
         [HttpGet("getallinstructorinsideonecourse/{courseId}")]
