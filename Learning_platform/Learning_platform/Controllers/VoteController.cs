@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Learning_platform.Controllers
 {
@@ -37,12 +38,20 @@ namespace Learning_platform.Controllers
             int roundedAverage = (int)Math.Round(averageVote);
             return Ok(roundedAverage);
         }
+        
         [HttpPost("AddVoteForCourse")]
-        public IActionResult AddVoteForCourse(int courseId, [FromBody] VoteDTO voteDTO)
+        public IActionResult AddVoteForCourse(int courseId, string userId, [FromBody] VoteDTO voteDTO)
         {
             if (voteDTO == null)
             {
                 return BadRequest("Invalid vote data.");
+            }
+
+            var vot = _context.Votes.Where(x => x.UserId == userId && x.Course.Id == courseId).Count();
+
+            if (vot != 0)
+            {
+                return BadRequest("Sorry You are Alread Voted this Coures.");
             }
 
             if (voteDTO.Value > 5)
@@ -59,6 +68,7 @@ namespace Learning_platform.Controllers
 
             var vote = new Vote
             {
+                UserId = userId,
                 Value = voteDTO.Value,
                 Course = course
             };
@@ -90,6 +100,7 @@ namespace Learning_platform.Controllers
 
             return Ok("Vote updated successfully.");
         }
+        
         [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteVoteForCourse(int courseId, int id)

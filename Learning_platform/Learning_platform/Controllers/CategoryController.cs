@@ -16,6 +16,7 @@ namespace Learning_platform.Controllers
         {
             _context = context;
         }
+        
         [Authorize(Roles = "Admin")]
         [HttpPost("addcategory")]
         public async Task<IActionResult> AddCategory([FromBody] CategoryDTO categoryDTO)
@@ -39,6 +40,7 @@ namespace Learning_platform.Controllers
 
             return Ok("Category added successfully.");
         }
+        
         [Authorize(Roles = "Admin")]
         [HttpPut("updatecategory/{id}")]
         public async Task<IActionResult> UpdateCategory(int id, [FromBody] CategoryDTO updatedCategoryDTO)
@@ -61,6 +63,7 @@ namespace Learning_platform.Controllers
 
             return Ok("Category updated successfully.");
         }
+        
         [Authorize(Roles = "Admin")]
         [HttpDelete("deletecategory/{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
@@ -90,6 +93,7 @@ namespace Learning_platform.Controllers
 
             return Ok(category);
         }
+        
         [HttpGet("getallcategory")]
         public IActionResult GetAllCategories()
         {

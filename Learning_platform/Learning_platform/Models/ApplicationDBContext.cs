@@ -16,6 +16,8 @@ namespace Learning_platform.Models
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Vote> Votes { get; set; }
+        public DbSet<StudentLessons> StudentLessons { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

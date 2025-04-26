@@ -1,4 +1,6 @@
-﻿namespace Learning_platform.DTO
+﻿using Learning_platform.Models;
+
+namespace Learning_platform.DTO
 {
     public class VoteDTO
     {

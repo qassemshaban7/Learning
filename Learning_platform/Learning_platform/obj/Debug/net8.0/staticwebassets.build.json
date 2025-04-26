@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zq3R6uyqzs4Fu8KpC+25rh2pEkIalQnDhKzRRYyRXb4=",
+  "Hash": "EtNWJsbGDiVfkoSVHwKPWOV1e+71bZsKgIlAoVnO3+E=",
   "Source": "Learning_platform",
   "BasePath": "_content/Learning_platform",
   "Mode": "Default",
@@ -17,23 +17,46 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg",
+      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\16b89959-9548-475d-99de-357ce5aaa933_tr.png",
       "SourceId": "Learning_platform",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
-      "RelativePath": "certificates/8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg",
+      "RelativePath": "certificates/16b89959-9548-475d-99de-357ce5aaa933_tr#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "4t2q3yopoq",
+      "Integrity": "uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\certificates\\8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg"
+      "OriginalItemSpec": "wwwroot\\certificates\\16b89959-9548-475d-99de-357ce5aaa933_tr.png"
+    },
+    {
+      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg",
+      "SourceId": "Learning_platform",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
+      "BasePath": "_content/Learning_platform",
+      "RelativePath": "certificates/1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tdxug39s97",
+      "Integrity": "gZALhaWz7dkswCHmBKiqs2sFPnhOV6JAKRUXoeFcw9g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificates\\1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg"
     },
     {
       "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\adminphoto.jpg",
@@ -41,56 +64,371 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
-      "RelativePath": "Images/adminphoto.jpg",
+      "RelativePath": "Images/adminphoto#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "bze7nzdr94",
+      "Integrity": "aUVrXQN6llbdGJyrCw3oagPHGIr1HHt8F2DCzNgkTGE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\adminphoto.jpg"
     },
     {
-      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg",
+      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png",
       "SourceId": "Learning_platform",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
       "BasePath": "_content/Learning_platform",
-      "RelativePath": "instructorImage/38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg",
+      "RelativePath": "instructorImage/7d8c8337-dfbf-4320-acfd-5734423bc607_tr#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "4t2q3yopoq",
+      "Integrity": "uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\instructorImage\\38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg"
+      "OriginalItemSpec": "wwwroot\\instructorImage\\7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "certificates/16b89959-9548-475d-99de-357ce5aaa933_tr.4t2q3yopoq.png",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\16b89959-9548-475d-99de-357ce5aaa933_tr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "44434"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Dec 2024 22:12:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4t2q3yopoq"
+        },
+        {
+          "Name": "label",
+          "Value": "certificates/16b89959-9548-475d-99de-357ce5aaa933_tr.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\videos\\6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
-      "SourceId": "Learning_platform",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\",
-      "BasePath": "_content/Learning_platform",
-      "RelativePath": "videos/6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\videos\\6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4"
+      "Route": "certificates/16b89959-9548-475d-99de-357ce5aaa933_tr.png",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\16b89959-9548-475d-99de-357ce5aaa933_tr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "44434"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Dec 2024 22:12:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gZALhaWz7dkswCHmBKiqs2sFPnhOV6JAKRUXoeFcw9g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Nov 2024 12:07:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gZALhaWz7dkswCHmBKiqs2sFPnhOV6JAKRUXoeFcw9g="
+        }
+      ]
+    },
+    {
+      "Route": "certificates/1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.tdxug39s97.jpg",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gZALhaWz7dkswCHmBKiqs2sFPnhOV6JAKRUXoeFcw9g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Nov 2024 12:07:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tdxug39s97"
+        },
+        {
+          "Name": "label",
+          "Value": "certificates/1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gZALhaWz7dkswCHmBKiqs2sFPnhOV6JAKRUXoeFcw9g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/adminphoto.bze7nzdr94.jpg",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\adminphoto.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aUVrXQN6llbdGJyrCw3oagPHGIr1HHt8F2DCzNgkTGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 Feb 2024 16:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bze7nzdr94"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/adminphoto.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aUVrXQN6llbdGJyrCw3oagPHGIr1HHt8F2DCzNgkTGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/adminphoto.jpg",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\Images\\adminphoto.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aUVrXQN6llbdGJyrCw3oagPHGIr1HHt8F2DCzNgkTGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 Feb 2024 16:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aUVrXQN6llbdGJyrCw3oagPHGIr1HHt8F2DCzNgkTGE="
+        }
+      ]
+    },
+    {
+      "Route": "instructorImage/7d8c8337-dfbf-4320-acfd-5734423bc607_tr.4t2q3yopoq.png",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "44434"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Nov 2024 12:07:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4t2q3yopoq"
+        },
+        {
+          "Name": "label",
+          "Value": "instructorImage/7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA="
+        }
+      ]
+    },
+    {
+      "Route": "instructorImage/7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png",
+      "AssetFile": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "44434"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 12 Nov 2024 12:07:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uPvGerJxOyUFY0AQdh7lfN84mxNDtsR6jHy8kHd9+EA="
+        }
+      ]
     }
   ]
 }

@@ -11,5 +11,9 @@ namespace Learning_platform.DTO
         [Required]
         public string ImageOfCertificate { get; set; }
         public int Price { get; set; }
+        public int vote { get; set; }   
+
+        public bool Favorate { get; set; }
+
     }
 }

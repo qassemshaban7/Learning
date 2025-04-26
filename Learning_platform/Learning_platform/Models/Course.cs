@@ -1,4 +1,6 @@
-﻿namespace Learning_platform.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Learning_platform.Models
 {
     public class Course
     {

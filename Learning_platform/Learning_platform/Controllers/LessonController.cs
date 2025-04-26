@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Security.Claims;
 
 namespace Learning_platform.Controllers
 {
@@ -20,23 +21,68 @@ namespace Learning_platform.Controllers
             _webHostEnvironment = webHostEnvironment;
             _context = context;
         }
+
+
         [HttpGet("PlayVideoForLesson/{lessonId}")]
-        public IActionResult PlayVideoForLesson(int lessonId)
+        public async Task<IActionResult> PlayVideoForLesson(int lessonId, string userId)
         {
-            var lesson = _context.Lessons.Find(lessonId);
+            var lesson = await _context.Lessons.FindAsync(lessonId);
 
             if (lesson == null)
             {
                 return NotFound("Lesson not found.");
             }
 
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User not found.");
+            }
+
+            var courseLessons = await _context.Lessons
+                .Where(l => l.CourseId == lesson.CourseId)
+                .OrderBy(l => l.CreationDate)
+                .ToListAsync();
+
+            var currentLessonIndex = courseLessons.FindIndex(l => l.Id == lessonId);
+
+            if (currentLessonIndex > 0)
+            {
+                var previousLessons = courseLessons.Take(currentLessonIndex).Select(l => l.Id).ToList();
+
+                var watchedLessons = await _context.StudentLessons
+                    .Where(sl => sl.StudentId == userId && previousLessons.Contains(sl.LessonId))
+                    .Select(sl => sl.LessonId)
+                    .ToListAsync();
+
+                if (watchedLessons.Count != previousLessons.Count)
+                {
+                    return BadRequest("You must watch previous lessons before accessing this one.");
+                }
+            }
+
+            var studentWatch = await _context.StudentLessons
+                .Where(sl => sl.StudentId == userId && sl.LessonId == lessonId)
+                .FirstOrDefaultAsync();
+
+            if (studentWatch == null)
+            {
+                var studLesson = new StudentLessons
+                {
+                    StudentId = userId,
+                    ApplicationUser = await _context.Users.FindAsync(userId),
+                    LessonId = lessonId
+                };
+
+                _context.StudentLessons.Add(studLesson);
+                await _context.SaveChangesAsync();
+            }
+
             return Ok(new
             {
                 LessonName = lesson.Name,
-                VideoUrl = $"videos/{lesson.Video}",
+                VideoUrl = $"https://learningplatformv1.runasp.net/videos//{lesson.Video}",
             });
         }
-
 
         [HttpGet("GetVideosForCourse/{courseId}")]
         public IActionResult GetVideosForCourse(int courseId)
@@ -48,14 +94,14 @@ namespace Learning_platform.Controllers
                 return NotFound("Course not found.");
             }
 
-            var videos = course.Lessons.Select(lesson =>
+            var videos = course.Lessons.OrderBy(c => c.CreationDate).Select(lesson =>
             {
                 //string videoUrl = GetVideoUrl(lesson.Video);
                 return new
                 {
                     LessonId = lesson.Id,
                     LessonName = lesson.Name,
-                    VideoUrl = $"videos/{lesson.Video}",
+                    VideoUrl = $"https://learningplatformv1.runasp.net/videos//{lesson.Video}",
                 };
             }).ToList();
 
@@ -95,7 +141,9 @@ namespace Learning_platform.Controllers
                     Name = lessonDTO.Name,
                     Description = lessonDTO.Description,
                     Video = uniqueFileName,
-                    Course = course
+                    CourseId = course.Id,
+                    Course = course,
+                    CreationDate = DateTime.Now,
                 };
 
                 _context.Lessons.Add(lesson);

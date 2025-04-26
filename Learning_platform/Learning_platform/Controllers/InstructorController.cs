@@ -34,7 +34,7 @@ namespace Learning_platform.Controllers
                     {
                         Id = instructor.Id,
                         Name = instructor.Name,
-                        ImageUrl = $"{imagePath}",
+                        ImageUrl = $"https://learningplatformv1.runasp.net/instructorImage//{imagePath}",
                         Description = instructor.Description,
                         Courses = instructor.Courses
                     };
@@ -58,7 +58,7 @@ namespace Learning_platform.Controllers
 
             var imageDetails = new
             {
-                Url = $"{instructor.Image}",
+                Url = $"https://learningplatformv1.runasp.net/instructorImage//{instructor.Image}",
                 Name = instructor.Name,
             };
 
@@ -111,6 +111,7 @@ namespace Learning_platform.Controllers
 
             return Ok("Instructor added successfully.");
         }
+        
         [Authorize(Roles = "Admin")]
         [HttpPut("update/{id}")]
         public async Task<IActionResult> UpdateInstructor(int id, [FromForm] InstructorDTO instructorDTO)
@@ -160,6 +161,7 @@ namespace Learning_platform.Controllers
 
             return Ok("Instructor updated successfully.");
         }
+        
         [Authorize(Roles = "Admin")]
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteInstructor(int id)
@@ -185,5 +187,6 @@ namespace Learning_platform.Controllers
 
             return Ok("Instructor deleted successfully.");
         }
+    
     }
 }

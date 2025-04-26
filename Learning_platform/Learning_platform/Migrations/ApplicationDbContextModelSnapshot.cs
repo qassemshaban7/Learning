@@ -116,14 +116,14 @@ namespace Learning_platform.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9ede9808-569c-4784-b950-f6118cc9caa5",
+                            ConcurrencyStamp = "f597f480-119f-4003-9f3b-746c131ad3a9",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             Image = "adminphoto",
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "Admin",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIygri5V5gFXY6KrTW5ClzfHSMQyksEgDBaIt6iAdOXccw5RXPzG5WgEWgn39QuUVQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEORs451fAqVDBISFq4gw0ov4E/xQETylE/2fbLUnddiOxOlheAmYogQswT3wO0YMjw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -181,6 +181,28 @@ namespace Learning_platform.Migrations
                     b.ToTable("Courses");
                 });
 
+            modelBuilder.Entity("Learning_platform.Models.Favorite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("Learning_platform.Models.Instructor", b =>
                 {
                     b.Property<int>("Id")
@@ -217,6 +239,9 @@ namespace Learning_platform.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -236,6 +261,33 @@ namespace Learning_platform.Migrations
                     b.ToTable("Lessons");
                 });
 
+            modelBuilder.Entity("Learning_platform.Models.StudentLessons", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("LessonId");
+
+                    b.ToTable("StudentLessons");
+                });
+
             modelBuilder.Entity("Learning_platform.Models.Vote", b =>
                 {
                     b.Property<int>("Id")
@@ -246,6 +298,10 @@ namespace Learning_platform.Migrations
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Value")
                         .HasColumnType("int");
@@ -286,15 +342,15 @@ namespace Learning_platform.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6d078a4e-4951-460b-90b9-a8410e932477",
-                            ConcurrencyStamp = "c177aea6-4c1f-45dd-870a-2f6326394975",
+                            Id = "4733cea8-0e4b-446f-a61e-3eb628dbe578",
+                            ConcurrencyStamp = "18b65823-ceee-474e-959b-9d9fda75ff48",
                             Name = "User",
                             NormalizedName = "user"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "2804a6ba-e0d7-44ee-99df-d6db7601cd9e",
+                            ConcurrencyStamp = "ec36c830-f0a1-4538-a324-c756bc02ce61",
                             Name = "Admin",
                             NormalizedName = "admin"
                         });
@@ -439,6 +495,17 @@ namespace Learning_platform.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Learning_platform.Models.Favorite", b =>
+                {
+                    b.HasOne("Learning_platform.Models.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+                });
+
             modelBuilder.Entity("Learning_platform.Models.Lesson", b =>
                 {
                     b.HasOne("Learning_platform.Models.Course", "Course")
@@ -448,6 +515,23 @@ namespace Learning_platform.Migrations
                         .IsRequired();
 
                     b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("Learning_platform.Models.StudentLessons", b =>
+                {
+                    b.HasOne("Learning_platform.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("Learning_platform.Models.Lesson", "Lesson")
+                        .WithMany()
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Lesson");
                 });
 
             modelBuilder.Entity("Learning_platform.Models.Vote", b =>

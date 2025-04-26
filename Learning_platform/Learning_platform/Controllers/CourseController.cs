@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Utilities;
 using System.Collections.Generic;
+using System.Security.Claims;
 namespace Learning_platform.Controllers
 {
     
@@ -23,16 +25,16 @@ namespace Learning_platform.Controllers
         }
 
         [HttpGet("search")]
-        public IActionResult SearchCoursesByName([FromQuery] string courseName)
+        public  async Task<IActionResult> SearchCoursesByName([FromQuery] string courseName)
         {
             if (string.IsNullOrWhiteSpace(courseName))
             {
                 return BadRequest("No result.");
             }
 
-            var courses = _context.Courses
+            var courses = await _context.Courses
                 .Where(c => c.Name.Contains(courseName, StringComparison.OrdinalIgnoreCase))
-                .ToList();
+                .ToListAsync();
 
             if (courses.Count == 0)
             {
@@ -42,22 +44,51 @@ namespace Learning_platform.Controllers
             var courseNames = courses.Select(c => c.Name).ToList();
             return Ok(courseNames);
         }
-        [HttpGet("getallcourses")]
-        public IActionResult GetCourses()
+
+        [HttpGet("getCoursesByCategoryId")]
+        public IActionResult GetCoursesByCategoryId(int CategoryId, string userId)
         {
-            var courses = _context.Courses.ToList();
+
+            var courses = _context.Courses
+                                  .Include(c => c.Votes)
+                                  .Where(x => x.Category.Id == CategoryId)
+                                  .ToList();
+
+            var courseDTOs = courses.Select(c => new getcoursedto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Description = c.Description,
+                Price = c.Price,
+                ImageOfCertificate = $"https://learningplatformv1.runasp.net/certificates//{c.ImageOfCertificate}",
+                vote = c.Votes.Any() ? (int)Math.Round(c.Votes.Average(v => v.Value)) : 0,
+                Favorate = userId != null && _context.Favorites.Any(x => x.UserId == userId && x.CourseId == c.Id)
+            }).ToList();
+
+            return Ok(courseDTOs);
+        }
+
+
+        [HttpGet("getallcourses")]
+        public IActionResult GetCourses(string userId)
+        {
+            var courses = _context.Courses.Include(x => x.Votes).ToList();
+
             var courseDTOs = courses.Select(c => new getcoursedto
             {
                 Id = c.Id,
                 Name = c.Name, 
                 Description = c.Description, 
                 Price = c.Price,
-                ImageOfCertificate = c.ImageOfCertificate,
+                ImageOfCertificate = $"https://learningplatformv1.runasp.net/certificates//{c.ImageOfCertificate}",
+                vote = c.Votes.Any() ? (int)Math.Round(c.Votes.Average(v => v.Value)) : 0,
+                Favorate = userId != null && _context.Favorites.Any(x => x.UserId == userId && x.CourseId == c.Id)
             }).ToList();
             return Ok(courseDTOs);
         }
+        
         [HttpGet("getcoursebID/{id}")]
-        public IActionResult GetCourseById(int id)
+        public IActionResult GetCourseById(int id, string userId)
         {
             var course = _context.Courses.Find(id);
 
@@ -72,10 +103,12 @@ namespace Learning_platform.Controllers
                 Name = course.Name,
                 Description = course.Description ,
                 Price = course.Price,
-                ImageOfCertificate = course.ImageOfCertificate,
+                ImageOfCertificate = $"https://learningplatformv1.runasp.net/certificates//{course.ImageOfCertificate}",
+                Favorate = userId != null && _context.Favorites.Any(x => x.UserId == userId && x.CourseId == id),
             };
             return Ok(courseDTO);
         }
+        
         [HttpGet("getallinstructorinsideonecourse/{courseId}")]
         public IActionResult GetInstructorsByCourse(int courseId)
         {
@@ -89,12 +122,13 @@ namespace Learning_platform.Controllers
             var instructors = course.Instructors.Select(i => new InstructorDetailsDTO
             {
                 Name = i.Name,
-                Photo = i.Image,
+                Photo = $"https://learningplatformv1.runasp.net/{i.Image}",
                 Description = i.Description,
             }).ToList();
 
             return Ok(instructors);
         }
+        
         [Authorize(Roles = "Admin")]
         [HttpPost("addcourse")]
         public async Task<IActionResult> AddCourse([FromForm] AddCourseDTO courseDTO)

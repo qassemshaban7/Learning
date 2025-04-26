@@ -1,10 +1,12 @@
-﻿using Learning_platform.DTO;
+﻿using Azure;
+using Learning_platform.DTO;
 using Learning_platform.Models;
 using Learning_platform.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
@@ -66,6 +68,11 @@ namespace Learning_platform.Controllers
                     }
                     user.Image = uniqueFileName;
                 }
+                else
+                {
+                    user.Image = "default.png";
+                }
+
 
                 IdentityResult result = await usermanager.CreateAsync(user, userDto.Password);
                 if (result.Succeeded)
@@ -94,7 +101,7 @@ namespace Learning_platform.Controllers
             if (ModelState.IsValid == true)
             {
                 //check - create token
-                ApplicationUser user = await usermanager.FindByEmailAsync(userDto.Email);
+                var user = await context.Users.FirstOrDefaultAsync(c => c.Email == userDto.Email);
                 if (user != null)//email found
                 {
                     bool found = await usermanager.CheckPasswordAsync(user, userDto.Password);
@@ -104,7 +111,7 @@ namespace Learning_platform.Controllers
                         var claims = new List<Claim>();
                         claims.Add(new Claim(ClaimTypes.Email, user.Email));
                         claims.Add(new Claim(ClaimTypes.Name, user.UserName)); 
-                        claims.Add(new Claim("Image", user.Image));
+                        //claims.Add(new Claim("Image", user.Image));
                         claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
 
                         //get role
@@ -125,17 +132,32 @@ namespace Learning_platform.Controllers
                             signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
                             );
 
-                        var response = new
+                        if (user.Image == null)
                         {
-                            token = new JwtSecurityTokenHandler().WriteToken(mytoken),
-                            expiration = mytoken.ValidTo,
-                            email = user.Email,
-                            userName = user.UserName,
-                            image = $"images/{user.Image}"
+                            var response = new
+                            {
+                                token = new JwtSecurityTokenHandler().WriteToken(mytoken),
+                                expiration = mytoken.ValidTo,
+                                email = user.Email,
+                                userName = user.UserName,
+                                image = "null",
+                            };
+                            return Ok(response);
+                        }
+                        else
+                        {
+                            var response2 = new
+                            {
+                                userId = user.Id,
+                                token = new JwtSecurityTokenHandler().WriteToken(mytoken),
+                                expiration = mytoken.ValidTo,
+                                email = user.Email,
+                                userName = user.UserName,
+                                image = $"https://learningplatformv1.runasp.net/Images//{ user.Image}",
+                            };
+                            return Ok(response2);
+                        }
 
-                        };
-
-                        return Ok(response);
                     }
                     return Ok("Email or password are invalid");
                 }
@@ -159,47 +181,136 @@ namespace Learning_platform.Controllers
 
             return Ok();
         }
+
         [HttpPost("send_reset_code")]
-        public async Task<IActionResult> SendResetCode(SendResetPassDto model, [FromServices] IEmailProvider _emailProvider)
+        public async Task<IActionResult> SendResetCode(SendPINDto model, [FromServices] IEmailProvider _emailProvider)
         {
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new
+                {
+                    status = 400,
+                    errorMessage = "Invalid ModelState"
+                });
+            }
             var user = await usermanager.FindByEmailAsync(model.Email);
-            if (user is null) return BadRequest("Email Not Found!");
+            if (user is null)
+            {
+                return NotFound(new
+                {
+                    status = 404,
+                    errorMessage = "Email Not Found!"
+                });
+            }
+
             int pin = await _emailProvider.SendResetCode(model.Email);
             user.PasswordResetPin = pin;
-            user.ResetExpires = DateTime.Now.AddMinutes(5);
+            user.ResetExpires = DateTime.Now.AddMinutes(10);
+            var expireTime = user.ResetExpires.Value.ToString("hh:mm tt");
             await usermanager.UpdateAsync(user);
-            return Ok(new{
-                ExpireAt = user.ResetExpires,
+            return Ok(new
+            {
+                status = 200,
+                ExpireAt = "expired at " + expireTime,
+                email = model.Email,
             });
         }
-        [HttpPost("reset_code")]
-        public async Task<IActionResult> SendResetCode(ResetPassDto model)
+        [HttpPost("verify_pin/{email}")]
+        public async Task<IActionResult> VerifyPin([FromBody] VerfiyPINDto model, [FromRoute] string email)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            var user = await usermanager.FindByEmailAsync(model.Email);
-            if (user is null || user.ResetExpires is null
-               || user.ResetExpires < DateTime.Now || user.PasswordResetPin != model.pin)
-                return BadRequest("Invalid Token!");
-
-            //await usermanager.ChangePasswordAsync(user, model.Pass);
-            var token = await usermanager.GeneratePasswordResetTokenAsync(user);
-            var result = await usermanager.ResetPasswordAsync(user, token, model.Pass);
-            if (result is null) return BadRequest();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new
+                {
+                    status = 400,
+                    errorMessage = "Invalid ModelState"
+                });
+            }
+            var user = await usermanager.FindByEmailAsync(email);
+            if (user is null)
+            {
+                return NotFound(new
+                {
+                    status = 404,
+                    errorMessage = "Email Not Found!"
+                });
+            }
+            if (user.ResetExpires < DateTime.Now || user.ResetExpires is null)
+            {
+                return BadRequest(new
+                {
+                    status = 400,
+                    errorMessage = "Time Expired try to send new pin"
+                });
+            }
+            if (user.PasswordResetPin != model.pin)
+            {
+                return BadRequest(new
+                {
+                    status = 400,
+                    errorMessage = "Invalid pin"
+                });
+            }
             user.ResetExpires = null;
             user.PasswordResetPin = null;
             await usermanager.UpdateAsync(user);
-            return Ok();
+            return Ok(new
+            {
+                status = 200,
+                message = "PIN verified successfully",
+                email = user.Email,
+            });
         }
-        [HttpPost("check_code")]
-        public async Task<IActionResult> CheckCode(CheckCodeDto model)  
+
+        [HttpPost("forget_password/{email}")]
+        public async Task<IActionResult> ForgetPassword([FromBody] ForgetPassDto model, [FromRoute] string email)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            var user = await usermanager.FindByEmailAsync(model.Email);
-            if (user is null || user.ResetExpires is null
-               || user.ResetExpires < DateTime.Now || user.PasswordResetPin != model.pin)
-                return BadRequest(new {message =  "Invalid Token!"});
-            return Ok(new { message = "Valid Token." });
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new
+                {
+                    status = 400,
+                    errorMessage = "Invalid model state."
+                });
+            }
+
+            if (model.NewPassword != model.ConfirmNewPassword)
+            {
+                return BadRequest(new
+                {
+                    status = 400,
+                    errorMessage = "New password and confirm new password do not match."
+                });
+            }
+
+            var user = await usermanager.FindByEmailAsync(email);
+            if (user is null)
+            {
+                return BadRequest(new
+                {
+                    status = 400,
+                    errorMessage = "Email Not Found!"
+                });
+            }
+            var token = await usermanager.GeneratePasswordResetTokenAsync(user);
+            var result = await usermanager.ResetPasswordAsync(user, token, model.NewPassword);
+
+            if (result.Succeeded)
+            {
+                await usermanager.UpdateAsync(user);
+                return Ok(new
+                {
+                    status = 200,
+                    message = "Password changed successfully"
+                });
+            }
+            return BadRequest(new
+            {
+                status = 400,
+                errorMessage = "Invalid model state."
+            });
+            //return BadRequest(result.Errors.FirstOrDefault());
         }
+
     }
 }

@@ -5,16 +5,20 @@
       "PackagePath": "staticwebassets\\Images\\adminphoto.jpg"
     },
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg",
-      "PackagePath": "staticwebassets\\certificates\\8816977e-2316-4094-ab99-df19d4f5614a_5421.jpg"
+      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\16b89959-9548-475d-99de-357ce5aaa933_tr.png",
+      "PackagePath": "staticwebassets\\certificates\\16b89959-9548-475d-99de-357ce5aaa933_tr.png"
     },
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg",
-      "PackagePath": "staticwebassets\\instructorImage\\38a060c2-42fd-47ac-b93c-a4e0c969c612_الجوكر.jpg"
+      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\certificates\\1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg",
+      "PackagePath": "staticwebassets\\certificates\\1b918535-8d41-4e91-bd3b-302e3324a877_photo_2024-10-14_13-02-02.jpg"
     },
     {
-      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\videos\\6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4",
-      "PackagePath": "staticwebassets\\videos\\6d74f9f7-cac3-458a-a71e-f920c04787ed_[Arabic] Learn Git _ GitHub _20 - The End And Advices(720P_HD).mp4"
+      "Id": "C:\\Users\\KING\\My-GitHub\\Learning\\Learning_platform\\Learning_platform\\wwwroot\\instructorImage\\7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png",
+      "PackagePath": "staticwebassets\\instructorImage\\7d8c8337-dfbf-4320-acfd-5734423bc607_tr.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Learning_platform.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Learning_platform.Microsoft.AspNetCore.StaticWebAssets.props",
